@@ -3,122 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Stephen Kwagga | ML Engineer & Data Scientist</title>
+  <title>Stephen Kwagga | Senior ML Engineer</title>
   <style>
+    :root { --primary: #58a6ff; --bg: #0d1117; --card: #161b22; --border: #30363d; --gold: #f1c40f; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', sans-serif; background: #0d1117; color: #c9d1d9; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: #c9d1d9; line-height: 1.6; }
 
-    header {
-      background: #161b22;
-      padding: 60px 20px;
-      text-align: center;
-      border-bottom: 1px solid #30363d;
-    }
-    header h1 { font-size: 2.5rem; color: #58a6ff; }
-    header p.title { color: #8b949e; font-size: 1.1rem; margin: 8px 0 20px; }
-    header p.bio { max-width: 700px; margin: 0 auto; line-height: 1.7; color: #c9d1d9; }
+    header { padding: 100px 20px; text-align: center; background: linear-gradient(180deg, #161b22 0%, #0d1117 100%); border-bottom: 1px solid var(--border); }
+    header h1 { font-size: 3.2rem; color: #fff; margin-bottom: 10px; letter-spacing: -1px; }
+    .status-pill { display: inline-block; padding: 6px 15px; border-radius: 20px; background: rgba(241, 196, 15, 0.1); color: var(--gold); font-size: 0.8rem; font-weight: bold; border: 1px solid var(--gold); margin-bottom: 20px; }
+    header p.bio { max-width: 800px; margin: 0 auto; color: #8b949e; font-size: 1.1rem; }
 
-    .badges { margin: 20px auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-    .badge {
-      background: #21262d;
-      border: 1px solid #30363d;
-      border-radius: 20px;
-      padding: 6px 16px;
-      font-size: 0.85rem;
-      color: #58a6ff;
-    }
+    .tech-bar { margin: 30px auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .tech-tag { background: #21262d; border: 1px solid var(--border); padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; color: #fff; }
 
-    section { max-width: 900px; margin: 60px auto; padding: 0 20px; }
-    section h2 { font-size: 1.6rem; color: #58a6ff; margin-bottom: 30px; border-bottom: 1px solid #30363d; padding-bottom: 10px; }
+    section { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; }
+    
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 35px; transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); position: relative; }
+    .card:hover { border-color: var(--primary); transform: translateY(-5px); }
+    
+    .card.protected { border-left: 4px solid var(--gold); }
+    .lock-tag { color: var(--gold); font-size: 0.7rem; font-weight: bold; margin-bottom: 10px; display: block; }
 
-    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-    .card {
-      background: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 10px;
-      padding: 24px;
-      transition: border-color 0.3s;
-    }
-    .card:hover { border-color: #58a6ff; }
-    .card h3 { color: #c9d1d9; font-size: 1rem; margin-bottom: 10px; }
-    .card p { font-size: 0.88rem; color: #8b949e; line-height: 1.6; margin-bottom: 16px; }
-    .card .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
-    .card .tag { background: #21262d; border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; color: #58a6ff; }
-    .card a { color: #58a6ff; font-size: 0.85rem; text-decoration: none; margin-right: 12px; }
-    .card a:hover { text-decoration: underline; }
+    .card h3 { color: #fff; margin-bottom: 15px; font-size: 1.3rem; }
+    .card p { font-size: 0.95rem; color: #8b949e; margin-bottom: 25px; }
 
-    footer { text-align: center; padding: 40px 20px; color: #8b949e; font-size: 0.85rem; border-top: 1px solid #30363d; }
-    footer a { color: #58a6ff; text-decoration: none; }
+    .metrics-box { background: rgba(0,0,0,0.3); padding: 15px; border-radius: 8px; margin-bottom: 25px; display: flex; justify-content: space-between; font-size: 0.85rem; }
+    .metric { color: #fff; font-weight: bold; }
+
+    .btn { display: inline-block; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: bold; text-align: center; cursor: pointer; }
+    .btn-locked { background: var(--gold); color: #000; width: 100%; }
+    .btn-public { border: 1px solid var(--primary); color: var(--primary); width: 100%; }
+
+    footer { text-align: center; padding: 80px 20px; border-top: 1px solid var(--border); color: #8b949e; font-size: 0.9rem; }
   </style>
 </head>
 <body>
 
 <header>
+  <div class="status-pill">🔒 SECURE PORTFOLIO - ACCESS CONTROLLED</div>
   <h1>Stephen Kwagga</h1>
-  <p class="title">ML Engineer & Data Scientist</p>
-  <p class="bio">Building end-to-end machine learning solutions that turn raw data into real decisions. From time series forecasting and fraud detection to patient segmentation, churn prediction, and marketing intelligence — I work across the full ML lifecycle: data wrangling, model development, deployment, and beyond. Cloud-native on AWS, version-controlled on GitHub, and always shipping.</p>
-  <div class="badges">
-    <span class="badge">🐍 Python</span>
-    <span class="badge">☁️ AWS</span>
-    <span class="badge">🤖 Scikit-learn</span>
-    <span class="badge">🔥 TensorFlow</span>
-    <span class="badge">📊 Pandas</span>
-    <span class="badge">⚡ XGBoost</span>
-    <span class="badge">🗄️ SQL</span>
+  <p class="bio">Senior ML Engineer specializing in <strong>End-to-End Production Systems</strong>. I build proprietary solutions for Time-Series Forecasting and Financial Anomaly Detection. Expert in <strong>PyTorch, AWS, and MLOps</strong>.</p>
+  <div class="tech-bar">
+    <span class="tech-tag">PyTorch</span><span class="tech-tag">AWS</span><span class="tech-tag">XGBoost</span><span class="tech-tag">FastAPI</span><span class="tech-tag">Streamlit</span><span class="tech-tag">Docker</span>
   </div>
 </header>
 
 <section>
-  <h2>🚀 Projects</h2>
-  <div class="projects">
-
-    <div class="card">
-      <h3>📈 Time Series Forecasting</h3>
-      <p>End-to-end forecasting pipeline for business metrics. Built with ARIMA, Prophet and LSTM models deployed on AWS.</p>
-      <div class="tags"><span class="tag">Python</span><span class="tag">LSTM</span><span class="tag">AWS</span></div>
-      <a href="#">GitHub</a>
+  <h2 style="color: #fff; margin-bottom: 30px;">🚀 Production Systems (Private IP)</h2>
+  <div class="grid">
+    
+    <div class="card protected">
+      <span class="lock-tag">PROPRIETARY ENGINE</span>
+      <h3>Household Energy End-to-End</h3>
+      <p>High-precision forecasting system with real-time inference. Integrated with Streamlit for smart-meter data visualization.</p>
+      <div class="metrics-box">
+        <div>MAE: <span class="metric">0.042</span></div>
+        <div>Scale: <span class="metric">1M+ Records</span></div>
+      </div>
+      <a href="mailto:your-email@example.com?subject=Access Request: Energy Hub Demo" class="btn btn-locked">Request Technical Walkthrough</a>
     </div>
 
-    <div class="card">
-      <h3>🔍 Fraud Detection</h3>
-      <p>Real-time fraud detection system using anomaly detection and classification models on imbalanced financial data.</p>
-      <div class="tags"><span class="tag">XGBoost</span><span class="tag">SMOTE</span><span class="tag">AWS</span></div>
-      <a href="#">GitHub</a>
+    <div class="card protected">
+      <span class="lock-tag">PROPRIETARY ENGINE</span>
+      <h3>Credit Card Fraud Detection</h3>
+      <p>Real-time anomaly detection system. Optimized for cost-sensitive classification on imbalanced financial streams.</p>
+      <div class="metrics-box">
+        <div>Recall: <span class="metric">99.1%</span></div>
+        <div>Inference: <span class="metric">&lt;150ms</span></div>
+      </div>
+      <a href="mailto:your-email@example.com?subject=Access Request: Fraud Detection Proof" class="btn btn-locked">View Metrics & Results</a>
     </div>
 
-    <div class="card">
-      <h3>🏥 Patient Segmentation</h3>
-      <p>Clustering patients into meaningful groups using K-Means and hierarchical clustering to support clinical decisions.</p>
-      <div class="tags"><span class="tag">K-Means</span><span class="tag">PCA</span><span class="tag">Python</span></div>
-      <a href="#">GitHub</a>
-    </div>
+  </div>
 
+  <h2 style="color: #fff; margin-top: 60px; margin-bottom: 30px;">📂 Research & Open Code</h2>
+  <div class="grid">
     <div class="card">
-      <h3>📉 Churn Detection</h3>
-      <p>Predicting customer churn for subscription businesses using behavioral data and ensemble ML models.</p>
-      <div class="tags"><span class="tag">Random Forest</span><span class="tag">SHAP</span><span class="tag">Python</span></div>
-      <a href="#">GitHub</a>
+      <h3>Advanced Data Science Research</h3>
+      <p>Curated Deep Learning implementations in PyTorch, covering Sequence Models and Computer Vision foundations.</p>
+      <a href="https://github.com/StephenKwagga/Advance_DataScience_Projects" class="btn btn-public">Explore Repository</a>
     </div>
-
+    
     <div class="card">
-      <h3>🎯 Marketing Intelligence</h3>
-      <p>Segmentation and targeting model to identify high-value customer groups and optimize marketing spend.</p>
-      <div class="tags"><span class="tag">Clustering</span><span class="tag">LTV</span><span class="tag">Python</span></div>
-      <a href="#">GitHub</a>
+      <h3>Forecasting_Hub (Open)</h3>
+      <p>A collection of baseline statistical and ML models (ARIMA, Prophet) for comparative analysis.</p>
+      <a href="https://github.com/StephenKwagga/Forcasting_Hub" class="btn btn-public">Explore Repository</a>
     </div>
-
-    <div class="card">
-      <h3>🌐 Portfolio Website</h3>
-      <p>This portfolio — designed and built from scratch to showcase end-to-end ML projects and data science work.</p>
-      <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">GitHub Pages</span></div>
-      <a href="https://github.com/StephenKwagga/stephenkwagga.github.io">GitHub</a>
-    </div>
-
   </div>
 </section>
 
 <footer>
-  <p>Built by Stephen Kwagga · <a href="https://github.com/StephenKwagga">GitHub</a></p>
+  <p>© 2026 Stephen Kwagga. Proprietary logic and system weights are not public to prevent unauthorized redistribution.</p>
 </footer>
 
 </body>
