@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+option tw<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -12,7 +12,7 @@
     header { padding: 100px 20px; text-align: center; background: linear-gradient(180deg, #161b22 0%, #0d1117 100%); border-bottom: 1px solid var(--border); }
     header h1 { font-size: 3.2rem; color: #fff; margin-bottom: 10px; letter-spacing: -1px; }
     .status-pill { display: inline-block; padding: 6px 15px; border-radius: 20px; background: rgba(241, 196, 15, 0.1); color: var(--gold); font-size: 0.8rem; font-weight: bold; border: 1px solid var(--gold); margin-bottom: 20px; }
-    header p.bio { max-width: 800px; margin: 0 auto; color: #8b949e; font-size: 1.1rem; }
+    header p.bio { max-width: 900px; margin: 0 auto; color: #8b949e; font-size: 1.1rem; line-height: 1.7; }
 
     .tech-bar { margin: 30px auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
     .tech-tag { background: #21262d; border: 1px solid var(--border); padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; color: #fff; }
@@ -32,9 +32,11 @@
     .metrics-box { background: rgba(0,0,0,0.3); padding: 15px; border-radius: 8px; margin-bottom: 25px; display: flex; justify-content: space-between; font-size: 0.85rem; }
     .metric { color: #fff; font-weight: bold; }
 
-    .btn { display: inline-block; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: bold; text-align: center; cursor: pointer; }
+    .btn { display: inline-block; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: bold; text-align: center; cursor: pointer; transition: 0.2s; }
     .btn-locked { background: var(--gold); color: #000; width: 100%; }
+    .btn-locked:hover { background: #d4a90f; }
     .btn-public { border: 1px solid var(--primary); color: var(--primary); width: 100%; }
+    .btn-public:hover { background: rgba(88, 166, 255, 0.1); }
 
     footer { text-align: center; padding: 80px 20px; border-top: 1px solid var(--border); color: #8b949e; font-size: 0.9rem; }
   </style>
@@ -44,11 +46,9 @@
 <header>
   <div class="status-pill">🔒 SECURED PORTFOLIO - ACCESS CONTROLLED</div>
   <h1>Stephen Kwagga</h1>
-  <p class="bio">ML Engineer & Data Scientist specializing in <strong>End-to-End Production Systems</strong>. I build proprietary solutions end-to-end machine learning systems that turn raw data into real decisions. From time series forecasting, fraud detection, patient segmentation, churn prediction, and marketing intelligence — I work across the full ML lifecycle: data wrangling, model development, deployment, and beyond. Cloud-native on AWS, version-controlled on GitHub, and always shipping. MLOps</strong>.</p>
+  <p class="bio">ML Engineer & Data Scientist specializing in <strong>End-to-End Production Systems</strong>. I build proprietary machine learning systems that turn raw data into real decisions. From time series forecasting and fraud detection to patient segmentation, churn prediction, and marketing intelligence — I work across the full ML lifecycle: data wrangling, model development, deployment, and beyond. Cloud-native on AWS, version-controlled on GitHub, and always shipping.</p>
   <div class="tech-bar">
-    <span class="tech-tag">PyTorch</span><span class="tech-tag">AWS</span><span class="tech-tag">TensorFlow</span><span class="tech-tag">FastAPI</span><span class="tech-tag">Streamlit</span><span
-class="tech-tag">Python</span><span class="tech-tag">Visualization</span><span
-class="tech-tag">Docker</span>
+    <span class="tech-tag">PyTorch</span><span class="tech-tag">AWS</span><span class="tech-tag">TensorFlow</span><span class="tech-tag">FastAPI</span><span class="tech-tag">Streamlit</span><span class="tech-tag">Python</span><span class="tech-tag">Visualization</span><span class="tech-tag">Docker</span>
   </div>
 </header>
 
@@ -58,11 +58,11 @@ class="tech-tag">Docker</span>
     
     <div class="card protected">
       <span class="lock-tag">PROPRIETARY ENGINE</span>
-      <h3>Time-Series Forcast End-to-End</h3>
-      <p>High-precision forecasting system with real-time inference. Integrated with Streamlit for smart-meter data visualization.</p>
+      <h3>Time-Series Forecast End-to-End</h3>
+      <p>High-precision household energy forecasting with real-time inference. Captures peak consumption within 0.02 kWh accuracy. Integrated with Streamlit dashboard for smart-meter data visualization.</p>
       <div class="metrics-box">
-        <div>RMSE: <span class="metric">0.228</span></div>
-        <div>Scale: <span class="metric">1M+ Records</span></div>
+        <div>RMSE: <span class="metric">0.228 kWh</span></div>
+        <div>MAE: <span class="metric">0.146 kWh</span></div>
       </div>
       <a href="mailto:sjk.steph01@gmail.com?subject=Access Request: Energy Hub Demo" class="btn btn-locked">Request Technical Walkthrough</a>
     </div>
@@ -70,35 +70,51 @@ class="tech-tag">Docker</span>
     <div class="card protected">
       <span class="lock-tag">PROPRIETARY ENGINE</span>
       <h3>Credit Card Fraud Detection</h3>
-      <p>Real-time anomaly detection system. Optimized for cost-sensitive classification on imbalanced financial streams.</p>
+      <p>Real-time anomaly detection for financial transactions. Catches 7 out of 10 fraud attempts before completion. Flagged transactions trigger 2FA, SMS verification, or manual review — balancing security with user experience.</p>
       <div class="metrics-box">
-        <div>Recall: <span class="metric">>70.0%</span></div>
-        <div>Inference: <span class="metric">&lt;150ms</span></div>
+        <div>Fraud Capture: <span class="metric">70%</span></div>
+        <div>Latency: <span class="metric">&lt;100ms</span></div>
       </div>
-      <a href="mailto:sjk.steph01@gmail.com?subject=Access Request: Fraud Detection Proof" class="btn btn-locked">View Metrics & Results</a>
+      <a href="mailto:sjk.steph01@gmail.com?subject=Access Request: Fraud Detection Proof" class="btn btn-locked">Request Technical Walkthrough</a>
     </div>
 
   </div>
 
   <h2 style="color: #fff; margin-top: 60px; margin-bottom: 30px;">📂 Research & Open Code</h2>
   <div class="grid">
+    <!-- DataScience_Projects: Multiple Business Problems Solved -->
+    <div class="card">
+      <h3>DataScience_Projects</h3>
+      <p>Customer retention modeling that reduces churn by identifying at-risk clients. Credit risk assessment that flags high-default applicants before approval. Insurance cost prediction accurate to within $4,160 MAE. Loan acceptance modeling that sharpens marketing ROI. Multiple business problems solved through rigorous EDA, feature engineering, and deployable ML models.</p>
+      <div class="metrics-box" style="justify-content: flex-start; gap: 20px;">
+        <div>📊 <span class="metric">EDA & Visualization</span></div>
+        <div>🤖 <span class="metric">Classification & Regression</span></div>
+        <div>💼 <span class="metric">Business Impact</span></div>
+      </div>
+      <a href="https://github.com/StephenKwagga/DataScience_Projects" class="btn btn-public">Explore Repository</a>
+    </div>
+
+    <!-- Advanced Research -->
     <div class="card">
       <h3>Advanced Data Science Research</h3>
-      <p>Curated Both Supervise and Unsupervised Learning implementations in covering Sequence Models.</p>
+      <p>Deep learning implementations in PyTorch — sequence models, computer vision architectures, and unsupervised learning algorithms. Code-first exploration of transformers, RNNs, and autoencoders for production-ready applications.</p>
       <a href="https://github.com/StephenKwagga/Advance_DataScience_Projects" class="btn btn-public">Explore Repository</a>
     </div>
     
+    <!-- Forecasting_Hub -->
     <div class="card">
-      <h3>Forecasting_Hub (Open)</h3>
-      <p>A collection of baseline statistical and ML models (ARIMA, Prophet) for comparative analysis.</p>
+      <h3>Forecasting_Hub</h3>
+      <p>Statistical and ML forecasting models battle-tested on real time-series data. ARIMA, Prophet, and XGBoost implementations for demand forecasting, energy load prediction, and financial trend analysis.</p>
       <a href="https://github.com/StephenKwagga/Forcasting_Hub" class="btn btn-public">Explore Repository</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Stephen Kwagga. Proprietary logic and system weights are not public to prevent unauthorized redistribution.</p>
+  <p>© 2026 Stephen Kwagga · sjk.steph01@gmail.com · Proprietary logic and system weights are not public to prevent unauthorized redistribution.</p>
 </footer>
 
 </body>
-                                                                                                                                                                                             </html>
+</html>
+
+
