@@ -1,102 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Stephen Kwagga | Senior ML Engineer</title>
-  <style>
-    :root { --primary: #58a6ff; --bg: #0d1117; --card: #161b22; --border: #30363d; --gold: #f1c40f; }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: #c9d1d9; line-height: 1.6; }
-
-    header { padding: 100px 20px; text-align: center; background: linear-gradient(180deg, #161b22 0%, #0d1117 100%); border-bottom: 1px solid var(--border); }
-    header h1 { font-size: 3.2rem; color: #fff; margin-bottom: 10px; letter-spacing: -1px; }
-    .status-pill { display: inline-block; padding: 6px 15px; border-radius: 20px; background: rgba(241, 196, 15, 0.1); color: var(--gold); font-size: 0.8rem; font-weight: bold; border: 1px solid var(--gold); margin-bottom: 20px; }
-    header p.bio { max-width: 800px; margin: 0 auto; color: #8b949e; font-size: 1.1rem; }
-
-    .tech-bar { margin: 30px auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-    .tech-tag { background: #21262d; border: 1px solid var(--border); padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; color: #fff; }
-
-    section { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; }
-    
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 35px; transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); position: relative; }
-    .card:hover { border-color: var(--primary); transform: translateY(-5px); }
-    
-    .card.protected { border-left: 4px solid var(--gold); }
-    .lock-tag { color: var(--gold); font-size: 0.7rem; font-weight: bold; margin-bottom: 10px; display: block; }
-
-    .card h3 { color: #fff; margin-bottom: 15px; font-size: 1.3rem; }
-    .card p { font-size: 0.95rem; color: #8b949e; margin-bottom: 25px; }
-
-    .metrics-box { background: rgba(0,0,0,0.3); padding: 15px; border-radius: 8px; margin-bottom: 25px; display: flex; justify-content: space-between; font-size: 0.85rem; }
-    .metric { color: #fff; font-weight: bold; }
-
-    .btn { display: inline-block; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: bold; text-align: center; cursor: pointer; }
-    .btn-locked { background: var(--gold); color: #000; width: 100%; }
-    .btn-public { border: 1px solid var(--primary); color: var(--primary); width: 100%; }
-
-    footer { text-align: center; padding: 80px 20px; border-top: 1px solid var(--border); color: #8b949e; font-size: 0.9rem; }
-  </style>
-</head>
-<body>
-
-<header>
-  <div class="status-pill">🔒 SECURE PORTFOLIO - ACCESS CONTROLLED</div>
-  <h1>Stephen Kwagga</h1>
-  <p class="bio">Senior ML Engineer specializing in <strong>End-to-End Production Systems</strong>. I build proprietary solutions for Time-Series Forecasting and Financial Anomaly Detection. Expert in <strong>PyTorch, AWS, and MLOps</strong>.</p>
-  <div class="tech-bar">
-    <span class="tech-tag">PyTorch</span><span class="tech-tag">AWS</span><span class="tech-tag">XGBoost</span><span class="tech-tag">FastAPI</span><span class="tech-tag">Streamlit</span><span class="tech-tag">Docker</span>
-  </div>
-</header>
-
 <section>
-  <h2 style="color: #fff; margin-bottom: 30px;">🚀 Production Systems (Private IP)</h2>
+  <h2 style="color: #fff; margin-bottom: 30px;">🚀 Production Systems & MLOps (Private IP)</h2>
   <div class="grid">
     
     <div class="card protected">
       <span class="lock-tag">PROPRIETARY ENGINE</span>
-      <h3>Household Energy End-to-End</h3>
-      <p>High-precision forecasting system with real-time inference. Integrated with Streamlit for smart-meter data visualization.</p>
+      <h3>Household Energy Hub: End-to-End Pipeline</h3>
+      <p>Architected a robust time-series forecasting system utilizing <strong>XGBoost</strong> with custom temporal feature engineering (Lags, Rolling Windows, Sine/Cosine encodings). 
+      <br><br><strong>Key Engineering:</strong> 
+      Implemented an <strong>Automated Retraining Loop</strong> triggered by RMSE degradation metrics. Containerized via <strong>Docker</strong> with a <strong>FastAPI</strong> layer for low-latency inference (&lt;200ms). Designed a real-time monitor to detect data drift and capture extreme consumption peaks.</p>
+      
+      
+
       <div class="metrics-box">
-        <div>MAE: <span class="metric">0.042</span></div>
-        <div>Scale: <span class="metric">1M+ Records</span></div>
+        <div>RMSE: <span class="metric">0.228 kWh</span></div>
+        <div>Inference: <span class="metric">Dockerized/FastAPI</span></div>
       </div>
-      <a href="mailto:your-email@example.com?subject=Access Request: Energy Hub Demo" class="btn btn-locked">Request Technical Walkthrough</a>
+      <a href="mailto:your-email@example.com?subject=Technical Audit: Energy Hub Drift Logic" class="btn btn-locked">Request Architecture Walkthrough</a>
     </div>
 
     <div class="card protected">
       <span class="lock-tag">PROPRIETARY ENGINE</span>
-      <h3>Credit Card Fraud Detection</h3>
-      <p>Real-time anomaly detection system. Optimized for cost-sensitive classification on imbalanced financial streams.</p>
+      <h3>Credit Card Fraud: Cost-Sensitive Intelligence</h3>
+      <p>Developed a high-recall classification engine for imbalanced financial data (1% fraud prevalence). 
+      <br><br><strong>Key Engineering:</strong> 
+      Optimized decision thresholds to prioritize <strong>Recall (99.1%)</strong>, ensuring maximum capture of fraudulent events. Built a <strong>Streamlit-integrated</strong> dashboard for real-time transaction testing, featuring probability scoring and automated 2FA trigger logic based on model confidence intervals.</p>
+      
+      
+
       <div class="metrics-box">
         <div>Recall: <span class="metric">99.1%</span></div>
-        <div>Inference: <span class="metric">&lt;150ms</span></div>
+        <div>Logic: <span class="metric">Cost-Sensitive RF</span></div>
       </div>
-      <a href="mailto:your-email@example.com?subject=Access Request: Fraud Detection Proof" class="btn btn-locked">View Metrics & Results</a>
+      <a href="mailto:your-email@example.com?subject=Technical Audit: Fraud Model Thresholds" class="btn btn-locked">Request Performance Proof</a>
     </div>
 
   </div>
 
-  <h2 style="color: #fff; margin-top: 60px; margin-bottom: 30px;">📂 Research & Open Code</h2>
+  <h2 style="color: #fff; margin-top: 60px; margin-bottom: 30px;">📂 Advanced Research & Open Source</h2>
   <div class="grid">
-    <div class="card">
-      <h3>Advanced Data Science Research</h3>
-      <p>Curated Deep Learning implementations in PyTorch, covering Sequence Models and Computer Vision foundations.</p>
-      <a href="https://github.com/StephenKwagga/Advance_DataScience_Projects" class="btn btn-public">Explore Repository</a>
-    </div>
     
     <div class="card">
-      <h3>Forecasting_Hub (Open)</h3>
-      <p>A collection of baseline statistical and ML models (ARIMA, Prophet) for comparative analysis.</p>
-      <a href="https://github.com/StephenKwagga/Forcasting_Hub" class="btn btn-public">Explore Repository</a>
+      <h3>🔥 Explainable AI (XAI): Bank Marketing</h3>
+      <p>Bridging the gap between "Black Box" models and business transparency. Trained a Random Forest classifier (0.89 AUC) and integrated <strong>LIME (Local Interpretable Model-agnostic Explanations)</strong> to audit individual predictions. Successfully identified <strong>Call Duration</strong> and <strong>Previous Outcome</strong> as the non-linear drivers of customer conversion.</p>
+      
+      
+
+      <div class="metrics-box">
+        <div>AUC-ROC: <span class="metric">0.89</span></div>
+        <div>Audit: <span class="metric">LIME / XAI</span></div>
+      </div>
+      <a href="https://github.com/StephenKwagga/Advance_DataScience_Projects" class="btn btn-public">Explore Research</a>
+    </div>
+
+    <div class="card">
+      <h3>💎 Behavioral Segmentation & Dimensionality Reduction</h3>
+      <p>Unsupervised learning engine designed for multi-channel marketing ROI. Applied <strong>K-Means++</strong> clustering on high-dimensional consumer data. Leveraged <strong>Principal Component Analysis (PCA)</strong> to reduce noise and visualize 5 distinct high-value customer personas, directly influencing targeted promotional strategies.</p>
+      
+      
+
+      <div class="metrics-box">
+        <div>Clusters: <span class="metric">K=5</span></div>
+        <div>Redux: <span class="metric">PCA / t-SNE</span></div>
+      </div>
+      <a href="https://github.com/StephenKwagga/Advance_DataScience_Projects" class="btn btn-public">View Clusters</a>
     </div>
   </div>
 </section>
-
-<footer>
-  <p>© 2026 Stephen Kwagga. Proprietary logic and system weights are not public to prevent unauthorized redistribution.</p>
-</footer>
-
-</body>
-  </html>
